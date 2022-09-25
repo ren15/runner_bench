@@ -19,4 +19,5 @@ jobs:
       - name: Docker build
         run: |
           ls -lah
+          chmod +x ./system_perf
           ./system_perf --n 20
