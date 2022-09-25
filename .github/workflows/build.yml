@@ -8,14 +8,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v2
 
     strategy:
       fail-fast: false
       matrix:
         d1: [0,1,2,3]
         d2: [0,1,2,3]
+
+    steps:
+      - uses: actions/checkout@v2
 
       - name: Run
         run: |
