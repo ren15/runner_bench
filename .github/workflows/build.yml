@@ -11,13 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check builder
+      - name: Run
         run: |
-          lscpu
-          free -h 
-          df -h
-      - name: Docker build
-        run: |
-          ls -lah
           chmod +x ./system_perf
           ./system_perf --n 20
+          lscpu | grep 'Model name:'
